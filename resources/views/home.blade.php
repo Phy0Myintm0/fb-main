@@ -501,8 +501,8 @@ body {
                     </div>
                     
                     <div class="content-grid" id="content-container">
-                        @foreach($contents->sortByDesc('publish_date')->take(6) as $content)
-                        <div class="content-card" 
+                @foreach($contents->sortByDesc('publish_date') as $content)                        
+<div class="content-card" 
                              id="content-{{ $content->id }}"
                              data-slug="{{ $content->slug }}"
                              data-category-id="category-{{ $content->category_id }}"
